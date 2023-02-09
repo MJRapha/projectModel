@@ -39,9 +39,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/buying-basket" element={<BuyingBasket />} />
           {/* master detail: */}
-          <Route path="/games/:id" element={<NintendoGameDetails />} />
-          {/* <Route path="/games/:id" element={<XboxGameDetails />} />
-          <Route path="/games/:id" element={<PsGameDetails />} /> */}
+          {/* <Route path="/games/:id" element={<NintendoGameDetails />} /> */}
+          <Route path="/games/:id" element={<XboxGameDetails />} />
+          <Route path="/games/:id" element={<PsGameDetails />} />
         </Routes>
       </IconContext.Provider>
     </>

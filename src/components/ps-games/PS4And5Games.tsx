@@ -7,7 +7,7 @@ function PS4And5Games() {
     return (
         <div className="d-flex">
             {psGames.map((g) => (
-                <PSGameItem {...g} key={g.idS} />
+                <PSGameItem {...g} key={g.id} />
             ))}
         </div>
     )

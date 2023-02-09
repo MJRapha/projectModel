@@ -6,7 +6,7 @@ const XboxGames = () => {
     return (
         <div className="d-flex">
             {xboxGames.map((g) => (
-                <XboxGameItem {...g} key={g.idX} />
+                <XboxGameItem {...g} key={g.id} />
             ))}
         </div>
     )
