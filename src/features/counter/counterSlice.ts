@@ -17,6 +17,11 @@ const initialState: CounterState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
+
+
+
+
+
 export const incrementAsync = createAsyncThunk(
   'counter/fetchCount',
   async (amount: number) => {
@@ -74,11 +79,11 @@ export const selectCount = (state: RootState) => state.counter.value;
 // Here's an example of conditionally dispatching actions based on current state.
 export const incrementIfOdd =
   (amount: number): AppThunk =>
-  (dispatch, getState) => {
-    const currentValue = selectCount(getState());
-    if (currentValue % 2 === 1) {
-      dispatch(incrementByAmount(amount));
-    }
-  };
+    (dispatch, getState) => {
+      const currentValue = selectCount(getState());
+      if (currentValue % 2 === 1) {
+        dispatch(incrementByAmount(amount));
+      }
+    };
 
 export default counterSlice.reducer;
